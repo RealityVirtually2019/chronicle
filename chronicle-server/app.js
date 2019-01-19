@@ -7,7 +7,7 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 app.get('/ping', (req, res) => {
-  res.send(name);
+  res.send('pong');
 });
 
 app.post('/chronicle/text', async (req, res) => {
