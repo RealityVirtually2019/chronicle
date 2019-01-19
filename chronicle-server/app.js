@@ -1,14 +1,25 @@
-const http = require('http');
+const app = require('express')();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
-const hostname = '127.0.0.1';
 const port = process.env.PORT || 8080;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+app.get('/ping', (req, res) => {
+  res.send('pong');
 });
 
-server.listen(port, () => {
+io.on('connection', function(socket) {
+  console.log('a user connected');
+
+  socket.on('chronicle-channel', function(msg){
+    console.log('message: ' + msg);
+  });
+
+  socket.on('disconnect', function() {
+    console.log('user disconnected');
+  });
+});
+
+http.listen(port, () => {
   console.log(`Server running at ${port}`);
 });

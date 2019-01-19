@@ -5,8 +5,9 @@ import TextScreen from '../screens/Text';
 
 class TextTab extends React.Component {
   render() {
+    console.log(this.props);
     return (
-      <TextScreen />
+      <TextScreen {...this.props}/>
     );
   }
 }
@@ -42,7 +43,9 @@ class URLTab extends React.Component {
 }
 
 const TabNavigator = createBottomTabNavigator({
-  Text: TextTab,
+  Text: {
+    screen: (props) => <TextTab {...props.screenProps}/>
+  },
   Photo: PhotoTab,
   Audio: AudioTab,
   URL: URLTab,
