@@ -6,7 +6,7 @@ export default class TextScreen extends React.Component {
     super(props);
     this.state = { text: '' };
     this.props.socket.on('chronicle-channel-text', function(msg) {
-      console.log('Got message: ' + msg);
+      console.log('Got message : ' + msg);
     });
   }
 
