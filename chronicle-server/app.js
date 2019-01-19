@@ -1,25 +1,21 @@
 const app = require('express')();
+const bodyParser = require('body-parser');
 const http = require('http').Server(app);
-const io = require('socket.io')(http);
+const storage = require('node-persist');
 
 const port = process.env.PORT || 8080;
 
-app.get('/ping', (req, res) => {
-  res.send('pong');
+app.get('/ping', async (req, res) => {
+  //you must first call storage.init
+  await storage.init( /* options ... */ );
+  await storage.setItem('name','yourname')
+  const name = await storage.getItem('name')
+  console.log(await storage.getItem('name')); // yourname
+  res.send(name);
 });
 
-io.on('connection', function(socket) {
-  console.log('a user connected');
-
-  socket.on('chronicle-channel-text', function(msg){
-    console.log('message: ' + msg);
-    // emit text message to all users in channel
-    io.emit('chronicle-channel-text', msg);
-  });
-
-  socket.on('disconnect', function() {
-    console.log('user disconnected');
-  });
+app.post('/chronicle/text', (req, res) => {
+  console.log(req.body);
 });
 
 http.listen(port, () => {

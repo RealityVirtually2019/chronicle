@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "socket.io": "^2.2.0"
+    "node-persist": "^3.0.3",
+    "socket.io": "^2.2.0",
+    "ws": "^6.1.2"
   }
 }
