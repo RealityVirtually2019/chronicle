@@ -11,8 +11,10 @@ app.get('/ping', (req, res) => {
 io.on('connection', function(socket) {
   console.log('a user connected');
 
-  socket.on('chronicle-channel', function(msg){
+  socket.on('chronicle-channel-text', function(msg){
     console.log('message: ' + msg);
+    // emit text message to all users in channel
+    io.emit('chronicle-channel-text', msg);
   });
 
   socket.on('disconnect', function() {

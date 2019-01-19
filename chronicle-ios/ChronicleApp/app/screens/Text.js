@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button, TextInput, View } from 'react-native';
-// import io from 'socket.io-client';
 
 export default class TextScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { text: '' };
+    this.props.socket.on('chronicle-channel-text', function(msg) {
+      console.log('Got message: ' + msg);
+    });
   }
 
   render() {
@@ -32,5 +34,5 @@ export default class TextScreen extends React.Component {
 }
 
 const makeRequest = (textString, socket) => {
-  socket.emit('chronicle-channel', textString);
+  socket.emit('chronicle-channel-text', textString);
 }

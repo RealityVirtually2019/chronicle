@@ -6,6 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.socket = io('https://chronicle-client-server.herokuapp.com');
+    // this.socket = io('http://localhost:8080');
   }
   render() {
     return <AppContainer screenProps={{socket: this.socket}}/>;
