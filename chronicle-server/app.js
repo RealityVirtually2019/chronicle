@@ -22,7 +22,7 @@ app.get('/latest', async (req, res) => {
   const storageItem = await storage.getItem('latest');
   if (storageItem === undefined) {
     console.log('No new items');
-    res.send('');
+    res.send({type: '', data: ''});
   } else {
     console.log('Found latest item: '  + storageItem.data + ' with type ' + storageItem.type); 
     await storage.removeItem('latest');
