@@ -1,0 +1,8 @@
+<manifest xmlns:ml="magicleap" ml:developer_id="b3e45b2b-b48a-4702-96ac-1498dce4a3e6" ml:package="com.werms.chronicle" ml:version_code="1" ml:version_name="">
+  <application ml:min_api_level="3" ml:sdk_version="1.0" ml:visible_name="Scrap">
+    <uses-privilege ml:name="LowLatencyLightwear" />
+    <component ml:binary_name="bin/Player.elf" ml:name=".fullscreen" ml:type="Fullscreen" ml:visible_name="Scrap">
+      <icon ml:model_folder="Icon/Model" ml:portal_folder="Icon/Portal" />
+    </component>
+  </application>
+</manifest>
