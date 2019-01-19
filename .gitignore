@@ -54,3 +54,4 @@ crashlytics-build.properties
 
 .DS_Store
 *node_modules
+*.node-persist
