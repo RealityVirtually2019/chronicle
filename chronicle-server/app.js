@@ -31,6 +31,7 @@ app.get('/latest', async (req, res) => {
   }
 });
 
+http.timeout = 60000;
 http.listen(port, () => {
   console.log(`Server running at ${port}`);
 });
