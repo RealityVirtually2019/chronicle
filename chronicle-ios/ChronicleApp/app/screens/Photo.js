@@ -33,7 +33,7 @@ export default class PhotoScreen extends React.Component {
         const source = { uri: response.uri };
   
         // You can also display the image using data:
-        const sourceData = { uri: 'data:image/jpeg;base64,' + response.data };
+        const sourceData = { uri: response.data };
   
         this.setState({
           mediaSrc: source,

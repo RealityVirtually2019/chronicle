@@ -1,27 +1,29 @@
 import React from 'react';
 import {
+  Button,
   Image,
   Text,
   TouchableHighlight,
   View
 } from 'react-native';
+import Emoji from 'react-native-emoji';
 
-export default class PhotoScreen extends React.Component {
+export default class MusicScreen extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  makeRequest(polyData, endpoint) {
-    console.log(polyData);
-    fetch(`${endpoint}/poly`, {
+  makeRequest(musicData, endpoint) {
+    console.log(musicData);
+    fetch(`${endpoint}/music`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        type: 'poly',
-        data: polyData,
+        type: 'music',
+        data: musicData,
       }),
     });
   }
@@ -30,15 +32,15 @@ export default class PhotoScreen extends React.Component {
     let rowIndex = 0;
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{fontWeight: 'bold', paddingBottom: 10}}>Choose any Poly model</Text>
-        {polyModels.map(polyModelRow => {
+        <Text style={{fontWeight: 'bold', paddingBottom: 10}}>Choose your favorite music <Emoji name='notes'/></Text>
+        {albums.map(albumRow => {
           rowIndex++;
           return (
             <View key={rowIndex} style={{ flexDirection: 'row', alignItems: 'center' }}>
-              {polyModelRow.map(polyModel => {
+              {albumRow.map(album => {
                 return (
-                  <TouchableHighlight key={polyModel.id} onPress={() => this.makeRequest(polyModel.id, this.props.endpoint)}>
-                    <Image source={polyModel.url} style={{ width: 150, height: 150 }}/>
+                  <TouchableHighlight key={album.id} onPress={() => this.makeRequest(album.id, this.props.endpoint)}>
+                    <Image source={album.url} style={{ width: 150, height: 150 }}/>
                   </TouchableHighlight>
                 );
               })}
@@ -50,7 +52,7 @@ export default class PhotoScreen extends React.Component {
 
 }
 
-const polyModels = [
+const albums = [
   [{
     id: 'AstronautPoly',
     url: require('../static/astronaut.jpg')
