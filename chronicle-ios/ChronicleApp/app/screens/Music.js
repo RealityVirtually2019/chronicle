@@ -54,27 +54,19 @@ export default class MusicScreen extends React.Component {
 
 const albums = [
   [{
-    id: 'AstronautPoly',
-    url: require('../static/astronaut.jpg')
+    id: 'DeLa',
+    url: require('../static/DeLa.jpg')
   },
   {
-    id: 'BoomboxPoly',
-    url: require('../static/boombox.jpg')
+    id: 'Sylvia',
+    url: require('../static/Sylvia.jpg')
   }],
   [{
-    id: 'PalmTreePoly',
-    url: require('../static/palmtree.jpg')
+    id: 'Moody',
+    url: require('../static/Moody.jpg')
   },
   {
-    id: 'GameBoyPoly',
-    url: require('../static/gameboy.jpg')
-  }],
-  [{
-    id: 'BurgerPoly',
-    url: require('../static/burger.jpg')
-  },
-  {
-    id: 'PizzaPoly',
-    url: require('../static/pizza.jpg')
+    id: 'Nas',
+    url: require('../static/Nas.jpg')
   }]
 ]
