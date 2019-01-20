@@ -8,15 +8,14 @@ public class MusicChronicleObjectCreator : MonoBehaviour {
     //DEBUG
     public Spawner spawner;
 
-    public ChronicleObject Create(string text)
+    public ChronicleObject Create(string musicName)
     {
-        GameObject newObj = (GameObject)Instantiate(ChronicleObjectTemplate);
+        GameObject newObj = Instantiate(Resources.Load("MusicChronicles/" + musicName + "MusicChronicle", typeof(GameObject))) as GameObject;
         return newObj.GetComponent<ChronicleObject>();
     }
 
 	// Use this for initialization
 	void Start () {
-        spawner.Spawn(this.Create("DEBUG"));
 	}
 	
 	// Update is called once per frame

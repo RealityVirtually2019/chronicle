@@ -13,7 +13,6 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        SelectedObject.gameObject.SetActive(false);
         cursorMesh = Cursor.GetChild(0).gameObject;
         GameStateController.OnChronicleStateChanged.AddListener(setCursorToolTip);
         setCursorToolTip();

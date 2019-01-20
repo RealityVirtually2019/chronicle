@@ -15,6 +15,7 @@ public class InputController : MonoBehaviour {
 
     private bool isScaling, isGrabbing = false;
     private Vector3 initScalingTriggerPoint, initScale = Vector3.zero;
+    private Matrix4x4 initScalingTriggerTrans;
 
     void Awake()
     {
@@ -107,15 +108,43 @@ public class InputController : MonoBehaviour {
 
     private void UpdateScaling(){
 
+        //current cursor pos relative to trigger trans
+        Vector3 localCursorPoint = Camera.main.transform.InverseTransformPoint(Cursor.position);
+        float sumOfDeltas = localCursorPoint.x + localCursorPoint.y + localCursorPoint.z;
+        float sign = 1f;
+        if(sumOfDeltas < 0){
+            sign = -1f;
+        }
+
         float distanceToInitPoint = Vector3.Distance(initScalingTriggerPoint,
                                           Cursor.position);
 
         float maxScaleModifier = 3f;
+        float minScaleModifier = 0.25f;
         float maxDistance = 0.25f;
 
-        spawner.SelectedObject.transform.localScale =
-                     Vector3.Lerp(initScale, initScale * maxScaleModifier,
-                         Mathf.Clamp01(distanceToInitPoint / maxDistance));
+        if(sign > 0){
+            spawner.SelectedObject.transform.localScale =
+            Vector3.Lerp(initScale, initScale * maxScaleModifier,
+            Mathf.Clamp01(distanceToInitPoint / maxDistance));
+        }else{
+            Debug.Log("Negative!");
+            spawner.SelectedObject.transform.localScale =
+            Vector3.Lerp(initScale, initScale * minScaleModifier,
+            Mathf.Clamp01(distanceToInitPoint / maxDistance));
+        }
+
+
+
+        //float distanceToInitPoint = Vector3.Distance(initScalingTriggerPoint,
+        //                                  Cursor.position);
+
+        //float maxScaleModifier = 3f;
+        //float maxDistance = 0.25f;
+
+        //spawner.SelectedObject.transform.localScale =
+                     //Vector3.Lerp(initScale, initScale * maxScaleModifier,
+                         //Mathf.Clamp01(distanceToInitPoint / maxDistance));
 
     }
     void OnButtonUp(byte controller_id, MLInputControllerButton button)
@@ -136,7 +165,10 @@ public class InputController : MonoBehaviour {
            == GameStateController.ChronicleState.Edit){
 
                 isScaling = true;
-                initScalingTriggerPoint = spawner.SelectedObject.transform.position;
+                //initScalingTriggerPoint = spawner.SelectedObject.transform.position;
+                initScalingTriggerPoint = Cursor.transform.position;
+                initScalingTriggerTrans = Cursor.transform.worldToLocalMatrix;
+
                 initScale = objectHit.transform.localScale;
                 if(spawner.isOccupied)
                     spawner.Detach();
@@ -162,8 +194,14 @@ public class InputController : MonoBehaviour {
 	{
         objectHit = other.GetComponent<ChronicleObject>();
 
-        if(objectHit!=null)
+        if(objectHit!=null){
             objectHit.outlineController.ShowHoverOutline();
+        }
+
+        var sticker = other.GetComponent<StickerController>();
+        if(sticker!= null){
+            sticker.HandlePreviewIntersection();
+        }
 	}
 
 	private void OnTriggerExit(Collider other)

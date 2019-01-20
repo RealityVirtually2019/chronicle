@@ -39,6 +39,12 @@ public class ChronicleObject : MonoBehaviour {
             restScale = this.transform.localScale;
         }
     }
+
+    public void forceSaveRestTransform(){
+        restPosition = this.transform.position;
+        restOrientation = this.transform.rotation;
+        restScale = this.transform.localScale;
+    }
 	// Update is called once per frame
 	void Update () {
 		

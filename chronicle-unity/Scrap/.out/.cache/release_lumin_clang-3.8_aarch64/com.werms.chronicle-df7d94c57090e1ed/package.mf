@@ -28,31 +28,178 @@
   },
   {
    "compression": 8,
-   "hash": "f18545aec8288ba49c5efefe00c62c6757264ce2",
+   "hash": "44b3d293194572417bcfa106cf5f118ce96dae52",
+   "pkgpath": "Data/131eece28f2d34e6495f60c00dabe571",
+   "size": 4220,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/131eece28f2d34e6495f60c00dabe571"
+  },
+  {
+   "compression": 8,
+   "hash": "0cd36dca712027368c881231fd64554fe8e33ce2",
+   "pkgpath": "Data/131eece28f2d34e6495f60c00dabe571.resource",
+   "size": 2052480,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/131eece28f2d34e6495f60c00dabe571.resource"
+  },
+  {
+   "compression": 8,
+   "hash": "9b116e8ccf46e2fc96f3902ee03e022792d63ec9",
+   "pkgpath": "Data/132322d5b61174c8ca487cf2f7c0c42d",
+   "size": 4248,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/132322d5b61174c8ca487cf2f7c0c42d"
+  },
+  {
+   "compression": 8,
+   "hash": "41e31cfbca4b74378282c714db94af2930131c60",
+   "pkgpath": "Data/132322d5b61174c8ca487cf2f7c0c42d.resS",
+   "size": 2796216,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/132322d5b61174c8ca487cf2f7c0c42d.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "c082a494854d98f15fa3961c51ca217329fd7735",
+   "pkgpath": "Data/1921554f71dbf4a7e81eabe1c382aebd",
+   "size": 4776,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/1921554f71dbf4a7e81eabe1c382aebd"
+  },
+  {
+   "compression": 8,
+   "hash": "96ddd55f4de2bd9766134c8510cb8e57a5bab5c4",
+   "pkgpath": "Data/1f307245dabf042d58de0c0a42ac5e7a",
+   "size": 4984,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/1f307245dabf042d58de0c0a42ac5e7a"
+  },
+  {
+   "compression": 8,
+   "hash": "a35ebcace1bcb41f0584aa6222af20c0680bd6a1",
+   "pkgpath": "Data/20a51a9878df543f0b3833eb81c4130c",
+   "size": 21900,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/20a51a9878df543f0b3833eb81c4130c"
+  },
+  {
+   "compression": 8,
+   "hash": "75e7c2e3ffd3e37f6cbc68ea0d8989c0e86479ef",
+   "pkgpath": "Data/2d6b27c50e64941cfba5af532cdbbb39",
+   "size": 4236,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/2d6b27c50e64941cfba5af532cdbbb39"
+  },
+  {
+   "compression": 8,
+   "hash": "201244aedab70c31978429091c7bc8d8d861d518",
+   "pkgpath": "Data/2d6b27c50e64941cfba5af532cdbbb39.resS",
+   "size": 43704,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/2d6b27c50e64941cfba5af532cdbbb39.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "a169d28c7e5f00dddbedc47d4ace4a1a9f647fe7",
    "pkgpath": "Data/354c351c8f9e8452b84b9adda5a57090",
    "size": 4984,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/354c351c8f9e8452b84b9adda5a57090"
   },
   {
    "compression": 8,
-   "hash": "bf8821bb83efe88ac982d5def454cc307139f739",
+   "hash": "6812737e945cbeda296ca81f5dacd4180f44e911",
+   "pkgpath": "Data/368cb5f0c775a4f059cc2e847268f4db",
+   "size": 106996,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/368cb5f0c775a4f059cc2e847268f4db"
+  },
+  {
+   "compression": 8,
+   "hash": "30cff20e109b5ea24db9a6f339093c04ca93cc02",
    "pkgpath": "Data/41400f368f8d346beb6a06862171aee7",
-   "size": 7192,
+   "size": 7248,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/41400f368f8d346beb6a06862171aee7"
   },
   {
    "compression": 8,
-   "hash": "2bbf9eb45c1748ba01f5e26c2149e0013635a838",
+   "hash": "3dc470f6ea3c653235d086e9d53ed42074a09407",
+   "pkgpath": "Data/42574efd15de14cfab38f239254af2de",
+   "size": 6436,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/42574efd15de14cfab38f239254af2de"
+  },
+  {
+   "compression": 8,
+   "hash": "595050bf013d791415789a9afac094667b25eb40",
+   "pkgpath": "Data/53915aa61fa404ea48d4d08ff5dad3e9",
+   "size": 4236,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/53915aa61fa404ea48d4d08ff5dad3e9"
+  },
+  {
+   "compression": 8,
+   "hash": "9e65b1df509f25b0ef9727cd73642065657563b2",
+   "pkgpath": "Data/53915aa61fa404ea48d4d08ff5dad3e9.resS",
+   "size": 2796216,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/53915aa61fa404ea48d4d08ff5dad3e9.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "74c63abc11f68cc80a2ecae7e1027883617b6f46",
    "pkgpath": "Data/586f37730a743442594e605dd215815c",
    "size": 4984,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/586f37730a743442594e605dd215815c"
   },
   {
    "compression": 8,
-   "hash": "c839060fe49be34ebf1096fb1ea0fc8f594752d4",
+   "hash": "2ff64455ff0a4949b941ac95cc0884710b6574ad",
+   "pkgpath": "Data/601e6b333726945d88865b6b2e12ac01",
+   "size": 4236,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/601e6b333726945d88865b6b2e12ac01"
+  },
+  {
+   "compression": 8,
+   "hash": "600107676f100e0e10e3007a14e48d9ba8f72878",
+   "pkgpath": "Data/601e6b333726945d88865b6b2e12ac01.resS",
+   "size": 174776,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/601e6b333726945d88865b6b2e12ac01.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "73ef3cbc5166e207d31202d84c194adfa4c0e756",
+   "pkgpath": "Data/662c429950eee41b8a248377c3a46c35",
+   "size": 6436,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/662c429950eee41b8a248377c3a46c35"
+  },
+  {
+   "compression": 8,
+   "hash": "fccc05cb7c846c6ee4cb7b5faf7277a52826dd29",
+   "pkgpath": "Data/70018693bbd2d4e928d4df50e8c43927",
+   "size": 4228,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/70018693bbd2d4e928d4df50e8c43927"
+  },
+  {
+   "compression": 8,
+   "hash": "120365b775a0d8963b8287f6e0c32bf9e10eb015",
+   "pkgpath": "Data/70018693bbd2d4e928d4df50e8c43927.resource",
+   "size": 3163232,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/70018693bbd2d4e928d4df50e8c43927.resource"
+  },
+  {
+   "compression": 8,
+   "hash": "b5169563ac0d256249605997cb9c074559f07835",
    "pkgpath": "Data/78fa1525d29384dfc9eef4723ef6d526",
    "size": 4992,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/78fa1525d29384dfc9eef4723ef6d526"
+  },
+  {
+   "compression": 8,
+   "hash": "04733aa19fd6ac584b9e93872b6c69568a189f31",
+   "pkgpath": "Data/7c5d459b4d5ac41f6b21ad2a2317d4bb",
+   "size": 4772,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/7c5d459b4d5ac41f6b21ad2a2317d4bb"
+  },
+  {
+   "compression": 8,
+   "hash": "35e49e7473d2cc6d0f091e3042a67e263f4e457f",
+   "pkgpath": "Data/7cecb6297edf04ab1aec6be2965cb8d6",
+   "size": 4248,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/7cecb6297edf04ab1aec6be2965cb8d6"
+  },
+  {
+   "compression": 8,
+   "hash": "f41bc36aa1e9106f0d3c464db085e04a9c613ddc",
+   "pkgpath": "Data/7cecb6297edf04ab1aec6be2965cb8d6.resS",
+   "size": 2796216,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/7cecb6297edf04ab1aec6be2965cb8d6.resS"
   },
   {
    "compression": 8,
@@ -63,30 +210,37 @@
   },
   {
    "compression": 8,
-   "hash": "3bf9f0e518b7261812f51f68acfb86492187c6dd",
+   "hash": "aeaa00aa1aa1a9f99c4e2a61aa3ddeb61b2d2801",
+   "pkgpath": "Data/8c08d4d87a5c44daa86865e568b19d9b",
+   "size": 4768,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/8c08d4d87a5c44daa86865e568b19d9b"
+  },
+  {
+   "compression": 8,
+   "hash": "faf954b5d167cc712bea3c51c11d573f605ddccd",
    "pkgpath": "Data/8e480f655e2094369852c00f9692d754",
    "size": 4984,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/8e480f655e2094369852c00f9692d754"
   },
   {
    "compression": 8,
-   "hash": "4d183a59cc6ca212cd36d5556fd1c67f9d9d104e",
+   "hash": "1f6045d71d7d6c9ba8f7672ea33e8b3868f7ff73",
    "pkgpath": "Data/8e5a84aba7480452a81367c03632b4dd",
    "size": 4984,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/8e5a84aba7480452a81367c03632b4dd"
   },
   {
    "compression": 8,
-   "hash": "993e6459aad369064412dbf3feac3d42e3c5b3d9",
+   "hash": "9e59af096efca82a6a9c53e62217384b8889a468",
    "pkgpath": "Data/Managed/Metadata/global-metadata.dat",
-   "size": 3098432,
+   "size": 3322460,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/Managed/Metadata/global-metadata.dat"
   },
   {
    "compression": 8,
-   "hash": "9f8be0ec1b5bca1d258dcade9bac82ef72823b1a",
+   "hash": "d072ead6e85b145f1b4814bdcd5e397506144a7a",
    "pkgpath": "bin/libil2cpp.so",
-   "size": 37636608,
+   "size": 40840088,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/Native/libil2cpp.so",
    "xfrm_flags": {
     "signed": {
@@ -97,9 +251,9 @@
      "version": 3
     }
    },
-   "xfrm_hash": "b2f1fdca71c851f5a53acc90c05e644e9968959f",
+   "xfrm_hash": "36ba392133292a769bc5b0392fc7ea9c93ba0995",
    "xfrm_path": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/.out/.cache/release_lumin_clang-3.8_aarch64/com.werms.chronicle-df7d94c57090e1ed/libil2cpp.so-2173510b5a277bb9",
-   "xfrm_size": 37637366
+   "xfrm_size": 40840846
   },
   {
    "compression": 8,
@@ -228,10 +382,38 @@
   },
   {
    "compression": 8,
-   "hash": "cab36d3188ea139abb7714b79d13e7cb92d3773f",
+   "hash": "319e2d147c8c503d99a12a26415bc2b0d3d0cc54",
+   "pkgpath": "Data/a4e444c5b3b0c4e8c877880aca30a29c",
+   "size": 6440,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/a4e444c5b3b0c4e8c877880aca30a29c"
+  },
+  {
+   "compression": 8,
+   "hash": "47fea88ef9956d9bf4da1f8ba77d511bbbb21821",
    "pkgpath": "Data/adcae46baa3736748a69f9f489676bd7",
    "size": 49726,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/adcae46baa3736748a69f9f489676bd7"
+  },
+  {
+   "compression": 8,
+   "hash": "8aeb5057b05a9046412b5df565ba037f7f7f5aaf",
+   "pkgpath": "Data/ba3355a5bdc4c44edbfbf0996d20b45c",
+   "size": 6436,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/ba3355a5bdc4c44edbfbf0996d20b45c"
+  },
+  {
+   "compression": 8,
+   "hash": "19e1c503ca66592d1c77b7e55e47df6fe0033093",
+   "pkgpath": "Data/bba577d82b85b4338acadc9445208591",
+   "size": 4772,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/bba577d82b85b4338acadc9445208591"
+  },
+  {
+   "compression": 8,
+   "hash": "5326a63e27da92b552e39b0c7cf6facd51777ea5",
+   "pkgpath": "Data/bca9e735b359b4c1bbb6e156e6deea25",
+   "size": 4772,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/bca9e735b359b4c1bbb6e156e6deea25"
   },
   {
    "compression": 8,
@@ -242,37 +424,79 @@
   },
   {
    "compression": 8,
-   "hash": "86228cb85c6222e33d556a2b4761b6f41e3c62e6",
+   "hash": "158e115787635b775441b064548dd38fb56ddf87",
+   "pkgpath": "Data/d4d17ee6403e444dd92fceabd100a440",
+   "size": 4776,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/d4d17ee6403e444dd92fceabd100a440"
+  },
+  {
+   "compression": 8,
+   "hash": "49467d8cb517bad812efbc755c1edfa0def3b466",
+   "pkgpath": "Data/e79c33456af0d4c27bc842bfa9b8c0b8",
+   "size": 4216,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/e79c33456af0d4c27bc842bfa9b8c0b8"
+  },
+  {
+   "compression": 8,
+   "hash": "e2e5df75674dd1a75a5dd0936a67206aded25c38",
+   "pkgpath": "Data/e79c33456af0d4c27bc842bfa9b8c0b8.resource",
+   "size": 4794368,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/e79c33456af0d4c27bc842bfa9b8c0b8.resource"
+  },
+  {
+   "compression": 8,
+   "hash": "8d6b9c31cf511692307569141ecdcfdf4ba4d37f",
+   "pkgpath": "Data/f00f9ce6fcc164e40b9cce290fdb90f7",
+   "size": 4244,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/f00f9ce6fcc164e40b9cce290fdb90f7"
+  },
+  {
+   "compression": 8,
+   "hash": "856fb17daa7f54f56c6aefdb188fb4dcf4502a68",
+   "pkgpath": "Data/f00f9ce6fcc164e40b9cce290fdb90f7.resS",
+   "size": 174776,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/f00f9ce6fcc164e40b9cce290fdb90f7.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "90f7b0375beea6c2244774b0ba1cf3d9b75ff3a5",
+   "pkgpath": "Data/ff1598075b82a4a748e8b194d068eaa7",
+   "size": 30556,
+   "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/ff1598075b82a4a748e8b194d068eaa7"
+  },
+  {
+   "compression": 8,
+   "hash": "a55ec9557dd9931f525acb857cd3f4796f79896f",
    "pkgpath": "Data/globalgamemanagers",
-   "size": 40740,
+   "size": 45612,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/globalgamemanagers"
   },
   {
    "compression": 8,
-   "hash": "e6ba0dda6e329d4b4edf23eb436f1daf2c2e92d4",
+   "hash": "e96399f4e546d422361ce67660ea2568511e1b52",
    "pkgpath": "Data/globalgamemanagers.assets",
    "size": 45072,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/globalgamemanagers.assets"
   },
   {
    "compression": 8,
-   "hash": "d81bc03156dba0060f3b3fc85e6d1424d379a1b1",
+   "hash": "93883c322930913198d2bd7bcb376d2c899e81f9",
    "pkgpath": "Data/level0",
-   "size": 22084,
+   "size": 22052,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/level0"
   },
   {
    "compression": 8,
-   "hash": "9b0a447cbdb9f0294a4d709f9268a9a00f85f899",
+   "hash": "636c087da3096977ece31a03a5977dd27e1ed4e5",
    "pkgpath": "Data/sharedassets0.assets",
-   "size": 1600616,
+   "size": 2938312,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/sharedassets0.assets"
   },
   {
    "compression": 8,
-   "hash": "0745a391d16681d6832af9f51763878ff0ba357e",
+   "hash": "aa6c5497badfb4943a3cf06fee8e3f2fa439f164",
    "pkgpath": "Data/sharedassets0.assets.resS",
-   "size": 21146416,
+   "size": 12080548,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/Data/sharedassets0.assets.resS"
   },
   {
@@ -303,9 +527,9 @@
   },
   {
    "compression": 8,
-   "hash": "bdc42fa820532fb12ce38700883b7e9c4d61d8a0",
+   "hash": "c4630449293939e5a190de84208656eeb75d8229",
    "pkgpath": "manifest.xml",
-   "size": 606,
+   "size": 653,
    "src": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/Temp/StagingArea/manifest.xml",
    "xfrm_flags": {
     "manifest": {
@@ -313,9 +537,9 @@
      "developer_id": "b3e45b2b-b48a-4702-96ac-1498dce4a3e6"
     }
    },
-   "xfrm_hash": "c7adc6038692fae2fcb0b0939dce5f18f9fd8d57",
+   "xfrm_hash": "9098f4ca72046f43a524639317fbe6ca658c56e2",
    "xfrm_path": "/Users/nicknewberg 1/Projects/chronicle/chronicle-unity/Scrap/.out/.cache/release_lumin_clang-3.8_aarch64/com.werms.chronicle-df7d94c57090e1ed/manifest.xml-22eb49fe4ff18133",
-   "xfrm_size": 619
+   "xfrm_size": 666
   }
  ],
  "pkgflags": {

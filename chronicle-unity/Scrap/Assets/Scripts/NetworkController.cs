@@ -23,6 +23,7 @@ public class NetworkController : MonoBehaviour {
     public TextChronicleObjectCreator textChronicleObjectCreator;
     public PhotoChronicleObjectCreator photoChronicleObjectCreator;
     public PolyChronicleObjectCreator polyChronicleObjectCreator;
+    public MusicChronicleObjectCreator musicChronicleObjectCreator;
 
 	// Use this for initialization
 	void Start () {
@@ -63,6 +64,10 @@ public class NetworkController : MonoBehaviour {
                         case "poly":
                             spawner.Spawn(polyChronicleObjectCreator.Create(chronicleData.data));
                             break;
+                        case "music":
+                            spawner.Spawn(musicChronicleObjectCreator.Create(chronicleData.data));
+                            break;
+
                         default:
                             break;
                     }

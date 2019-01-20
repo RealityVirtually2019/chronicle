@@ -23,7 +23,7 @@ public class OutlineController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        changeColor();
         HideOutline();
     }
 
