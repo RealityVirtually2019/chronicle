@@ -12,6 +12,7 @@ app.get('/ping', (req, res) => {
 });
 
 app.post('/chronicle/:contentType', async (req, res) => {
+  req.setTimeout(1000000);
   await storage.init();
   const storageItem = req.body.data;
   console.log('Setting item of type: ' + req.body.type);
