@@ -22,6 +22,7 @@ public class NetworkController : MonoBehaviour {
     public Spawner spawner;
     public TextChronicleObjectCreator textChronicleObjectCreator;
     public PhotoChronicleObjectCreator photoChronicleObjectCreator;
+    public PolyChronicleObjectCreator polyChronicleObjectCreator;
 
 	// Use this for initialization
 	void Start () {
@@ -50,11 +51,22 @@ public class NetworkController : MonoBehaviour {
                     ChronicleData.CreateFromJSON(www.downloadHandler.text);
 
                 if(chronicleData.type != "" && chronicleData.data != ""){
-                    Debug.Log(chronicleData.data);
 
-                    if (chronicleData.type == "text") {
-                        spawner.Spawn(textChronicleObjectCreator.Create(chronicleData.data));
+                    switch (chronicleData.type)
+                    {
+                        case "text":
+                            spawner.Spawn(textChronicleObjectCreator.Create(chronicleData.data));
+                            break;
+                        case "photo":
+                            spawner.Spawn(photoChronicleObjectCreator.Create(chronicleData.data));
+                            break;
+                        case "poly":
+                            spawner.Spawn(polyChronicleObjectCreator.Create(chronicleData.data));
+                            break;
+                        default:
+                            break;
                     }
+
                 }
 
 
@@ -66,6 +78,11 @@ public class NetworkController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        //DEBUG SPAWN POLY
+        if(Input.GetKeyDown(KeyCode.P)){
+            spawner.Spawn(polyChronicleObjectCreator.Create("BoomboxPoly"));
+        }
 		
 	}
 }

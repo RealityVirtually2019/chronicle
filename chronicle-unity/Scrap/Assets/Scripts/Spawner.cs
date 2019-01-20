@@ -15,6 +15,8 @@ public class Spawner : MonoBehaviour {
 	void Start () {
         SelectedObject.gameObject.SetActive(false);
         cursorMesh = Cursor.GetChild(0).gameObject;
+        GameStateController.OnChronicleStateChanged.AddListener(setCursorToolTip);
+        setCursorToolTip();
 	}
 	
 	// Update is called once per frame
@@ -36,7 +38,7 @@ public class Spawner : MonoBehaviour {
 
         //SelectedObject.transform.parent = Cursor;
 
-        isOccupied = true;
+        //isOccupied = true;
     }
 
     //Spawns an object above the cursor
@@ -54,7 +56,7 @@ public class Spawner : MonoBehaviour {
 
         //SelectedObject.transform.parent = Cursor;
 
-        isOccupied = true;
+        //isOccupied = true;
     }
 
     public void Attach(ChronicleObject obj){
@@ -76,6 +78,25 @@ public class Spawner : MonoBehaviour {
 
         SelectedObject.transform.DOLookAt(Camera.main.transform.position, 0.5f)
                    .SetEase(Ease.InCubic);
+    }
+
+    private void setCursorToolTip(){
+        
+        var cursorOutline = cursorMesh.GetComponent<OutlineController>();
+        var cursorText = cursorMesh.GetComponentInChildren<TextMesh>();
+        if(GameStateController.CurrentState == GameStateController.ChronicleState.Edit){
+            cursorOutline.ShowOutline();
+            cursorText.text = "Edit";
+            cursorText.color = new Color(0f, 0f, 0f, 0f);
+            DOTween.To(() => cursorText.color, x => cursorText.color = x, new Color(191f/255f, 120f/255f, 5f/255f, 1f), 1f)
+                   .OnComplete(()=> { DOTween.To(() => cursorText.color, x => cursorText.color = x, new Color(191f/255f, 120f/255f, 5f/255f, 0f), 1f); });
+        }else{
+            cursorOutline.HideOutline();
+            cursorText.text = "View";
+            cursorText.color = new Color(0f, 0f, 0f, 0f);
+            DOTween.To(() => cursorText.color, x => cursorText.color = x, new Color(99f/255f, 199f/255f, 207f/255f, 1f), 1f)
+                   .OnComplete(() => { DOTween.To(() => cursorText.color, x => cursorText.color = x, new Color(99f/255f, 199f/255f, 207/255f, 0f), 1f); });
+        }
     }
 
 

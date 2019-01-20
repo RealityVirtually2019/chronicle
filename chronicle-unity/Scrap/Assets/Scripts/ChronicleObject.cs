@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using DG.Tweening;
 
 public class ChronicleObject : MonoBehaviour {
@@ -8,6 +9,9 @@ public class ChronicleObject : MonoBehaviour {
     public OutlineController outlineController;
     private Vector3 restPosition;
     private Quaternion restOrientation;
+    public UnityEvent OnPickup, OnRelease;
+    [HideInInspector]
+    public Vector3 restScale;
 
 
 	private void Awake()
@@ -32,6 +36,7 @@ public class ChronicleObject : MonoBehaviour {
            == GameStateController.ChronicleState.View){
             restPosition = this.transform.position;
             restOrientation = this.transform.rotation;
+            restScale = this.transform.localScale;
         }
     }
 	// Update is called once per frame

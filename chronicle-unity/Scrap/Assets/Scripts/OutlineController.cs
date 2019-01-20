@@ -15,8 +15,9 @@ public class OutlineController : MonoBehaviour
     private void Awake()
     {
         outlineMat = GetComponent<Renderer>().material;
-        //firstOutlineWidth = outlineMat.GetFloat(" _FirstOutlineWidth");
-        //secondOutlineWidth = outlineMat.GetFloat(" _SecondOutlineWidth");
+        firstOutlineWidth = outlineMat.GetFloat("_FirstOutlineWidth");
+        secondOutlineWidth = outlineMat.GetFloat("_SecondOutlineWidth");
+        GameStateController.OnChronicleStateChanged.AddListener(changeColor);
     }
 
     // Use this for initialization
@@ -54,6 +55,16 @@ public class OutlineController : MonoBehaviour
     {
         outlineMat.SetFloat("_FirstOutlineWidth", secondOutlineWidth);
         outlineMat.SetFloat("_SecondOutlineWidth", 0f);
+    }
+
+    private void changeColor(){
+        if(GameStateController.CurrentState == GameStateController.ChronicleState.Edit){
+            outlineMat.SetColor("_FirstOutlineColor", new Color(191f / 255f, 120f / 255f, 5f / 255f, 89f / 255f));
+            outlineMat.SetColor("_SecondOutlineColor", new Color(191f / 255f, 120f / 255f, 5f / 255f, 1f));
+        }else{
+            outlineMat.SetColor("_FirstOutlineColor", new Color(99f / 255f, 199f / 255f, 207f / 255f, 89f/255f));
+            outlineMat.SetColor("_SecondOutlineColor", new Color(99f / 255f, 199f / 255f, 207f / 255f, 1f));
+        }
     }
 }
 

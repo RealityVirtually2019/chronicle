@@ -62,29 +62,37 @@ public class InputController : MonoBehaviour {
             spawner.Attach(objectHit);
             isGrabbing = true;
 
-            if(objectHit)
-                objectHit.outlineController.ShowOutline();
+            spawner.SelectedObject.outlineController.ShowOutline();
+
+            if (GameStateController.CurrentState
+                == GameStateController.ChronicleState.View)
+            {
+                //lets us play stuff in view mode
+                spawner.SelectedObject.OnPickup.Invoke();
+            }
 
 
         }
 
         //Detach Grabbed Object on Trigger Release
         if(controller.TriggerValue < 0.2f && isGrabbing){
+            
 
+            if (spawner.isOccupied){
 
-            spawner.Detach();
-            isGrabbing = false;
-
-            if (objectHit){
-
-                objectHit.outlineController.HideOutline();
+                spawner.SelectedObject.outlineController.HideOutline();
 
                 if (GameStateController.CurrentState
                     == GameStateController.ChronicleState.View)
                 {
                     //Return Object to rest position
-                    objectHit.ReturnToRest();
+                    spawner.SelectedObject.ReturnToRest();
+                    //lets us play stuff in view mode
+                    spawner.SelectedObject.OnRelease.Invoke();
                 }
+
+                spawner.Detach();
+                isGrabbing = false;
             }
 
         }
@@ -144,7 +152,8 @@ public class InputController : MonoBehaviour {
         //Debug spawning
         if (button == MLInputControllerButton.HomeTap && !spawner.isOccupied)
         {
-            spawner.Spawn();
+            //spawner.Spawn();
+            GameStateController.ToggleChronicleState();
             //isGrabbing = true;
         }
     }
