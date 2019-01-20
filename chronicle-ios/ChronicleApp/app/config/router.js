@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import TextScreen from '../screens/Text';
+import PhotoScreen from '../screens/Photo';
 
 class TextTab extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <TextScreen {...this.props}/>
     );
@@ -15,9 +15,7 @@ class TextTab extends React.Component {
 class PhotoTab extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
+      <PhotoScreen {...this.props}/>
     );
   }
 }
@@ -46,7 +44,9 @@ const TabNavigator = createBottomTabNavigator({
   Text: {
     screen: (props) => <TextTab {...props.screenProps}/>
   },
-  Photo: PhotoTab,
+  Photo: {
+    screen: (props) => <PhotoTab {...props.screenProps}/>
+  },
   Audio: AudioTab,
   URL: URLTab,
 });

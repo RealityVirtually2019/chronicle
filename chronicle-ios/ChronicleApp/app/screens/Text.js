@@ -5,14 +5,11 @@ export default class TextScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = { text: '' };
-    this.props.socket.on('chronicle-channel-text', function(msg) {
-      console.log('Got message : ' + msg);
-    });
   }
 
   render() {
     const onPressSubmit = () => {
-      makeRequest(this.state.text, this.props.socket);
+      makeRequest(this.state.text, this.props.endpoint);
       this.setState({ text: '' });
     }
 
@@ -26,13 +23,23 @@ export default class TextScreen extends React.Component {
         />
         <Button
           onPress={onPressSubmit}
-          title="Submit"
+          title='Submit'
         />
       </View>
     );
   }
 }
 
-const makeRequest = (textString, socket) => {
-  socket.emit('chronicle-channel-text', textString);
+const makeRequest = (textString, endpoint) => {
+  fetch(`${endpoint}/text`, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      type: 'text',
+      data: textString,
+    }),
+  });
 }

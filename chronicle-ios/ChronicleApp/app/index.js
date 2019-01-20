@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { AppContainer } from './config/router';
-import io from 'socket.io-client';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.socket = io('https://chronicle-client-server.herokuapp.com');
-    // this.socket = io('http://localhost:8080');
+    // this.endpoint = 'https://chronicle-client-server.herokuapp.com/chronicle';
+    this.endpoint = 'http://localhost:8080/chronicle';
   }
   render() {
-    return <AppContainer screenProps={{socket: this.socket}}/>;
+    return <AppContainer screenProps={{endpoint: this.endpoint}}/>;
   }
 }
 
