@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class Spawner : MonoBehaviour {
 
-    public GameObject SelectedObject;
+    public ChronicleObject SelectedObject;
     public Transform Cursor;
     private GameObject cursorMesh;
     [HideInInspector]
@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        SelectedObject.SetActive(false);
+        SelectedObject.gameObject.SetActive(false);
         cursorMesh = Cursor.GetChild(0).gameObject;
 	}
 	
@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour {
     //Spawns an object above the cursor
     public void Spawn(){
         
-        SelectedObject.SetActive(true);
+        SelectedObject.gameObject.SetActive(true);
 
         SelectedObject.transform.position = Cursor.position
             + Cursor.transform.up * 0.03f;
@@ -34,12 +34,30 @@ public class Spawner : MonoBehaviour {
         SelectedObject.transform.DOScale(Vector3.one, 1f)
                    .SetEase(Ease.OutBack);
 
-        SelectedObject.transform.parent = Cursor;
+        //SelectedObject.transform.parent = Cursor;
 
         isOccupied = true;
     }
 
-    public void Attach(GameObject obj){
+    //Spawns an object above the cursor
+    public void Spawn(ChronicleObject chronicleObject)
+    {
+
+        chronicleObject.gameObject.SetActive(true);
+
+        chronicleObject.transform.position = Cursor.position
+            + Cursor.transform.up * 0.03f;
+        chronicleObject.transform.LookAt(Camera.main.transform);
+        chronicleObject.transform.localScale = Vector3.zero;
+        chronicleObject.transform.DOScale(Vector3.one, 1f)
+                   .SetEase(Ease.OutBack);
+
+        //SelectedObject.transform.parent = Cursor;
+
+        isOccupied = true;
+    }
+
+    public void Attach(ChronicleObject obj){
 
         SelectedObject = obj;
         SelectedObject.transform.parent = Cursor.transform;

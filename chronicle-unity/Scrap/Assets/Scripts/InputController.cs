@@ -11,15 +11,16 @@ public class InputController : MonoBehaviour {
     private MLInputController controller;
     public Transform Cursor;
     private Spawner spawner;
-    private GameObject objectHit = null;
+    private ChronicleObject objectHit = null;
 
-    private bool isScaling = false;
+    private bool isScaling, isGrabbing = false;
     private Vector3 initScalingTriggerPoint, initScale = Vector3.zero;
 
     void Awake()
     {
         MLInput.Start();
         MLInput.OnControllerButtonDown += OnButtonDown;
+        MLInput.OnControllerButtonUp += OnButtonUp;
 
         controller = MLInput.GetController(MLInput.Hand.Left);
         spawner = this.GetComponent<Spawner>();
@@ -29,6 +30,7 @@ public class InputController : MonoBehaviour {
     void OnDestroy()
     {
         MLInput.OnControllerButtonDown -= OnButtonDown;
+        MLInput.OnControllerButtonUp -= OnButtonUp;
         MLInput.Stop();
     }
 
@@ -41,6 +43,11 @@ public class InputController : MonoBehaviour {
     void Update()
     {
 
+        //HACK Change Gamestate
+        if(Input.GetKeyDown(KeyCode.Space)){
+            GameStateController.ToggleChronicleState();
+        }
+
         //Update the cursor to follow our controller
         Cursor.position =
            controller.Position +
@@ -48,23 +55,40 @@ public class InputController : MonoBehaviour {
 
         Cursor.rotation = controller.Orientation;
 
-        //Init the scaling process when trigger is pressed
-        if(controller.TriggerValue > 0.8f 
-           && !isScaling && spawner.isOccupied){
+        //Enable Grab on Trigger
+        if(controller.TriggerValue > 0.8f && !isGrabbing
+           && objectHit!= null){
 
-            isScaling = true;
-            initScalingTriggerPoint = Cursor.position;
-            initScale = objectHit.transform.localScale;
+            spawner.Attach(objectHit);
+            isGrabbing = true;
+
+            if(objectHit)
+                objectHit.outlineController.ShowOutline();
+
+
+        }
+
+        //Detach Grabbed Object on Trigger Release
+        if(controller.TriggerValue < 0.2f && isGrabbing){
+
+
             spawner.Detach();
+            isGrabbing = false;
+
+            if (objectHit){
+
+                objectHit.outlineController.HideOutline();
+
+                if (GameStateController.CurrentState
+                    == GameStateController.ChronicleState.View)
+                {
+                    //Return Object to rest position
+                    objectHit.ReturnToRest();
+                }
+            }
 
         }
 
-        //Disable the scaling process when trigger is released
-        if(controller.TriggerValue < 0.2f && isScaling){
-            
-            isScaling = false;
-            spawner.Attach(spawner.SelectedObject);
-        }
 
         if(isScaling){
 
@@ -86,21 +110,28 @@ public class InputController : MonoBehaviour {
                          Mathf.Clamp01(distanceToInitPoint / maxDistance));
 
     }
+    void OnButtonUp(byte controller_id, MLInputControllerButton button)
+    {
+        if (button == MLInputControllerButton.Bumper && isScaling)
+        {
 
+            isScaling = false;
+
+        }
+    }
 
     void OnButtonDown(byte controller_id, MLInputControllerButton button)
     {
 
-        if ((button == MLInputControllerButton.Bumper))
-        {
-            if (spawner.isOccupied)
-            {
-                spawner.Detach();
-            }
-            else{
-                
-                spawner.Attach(objectHit);
-            }
+        if(button == MLInputControllerButton.Bumper && !isScaling
+           && objectHit != null && GameStateController.CurrentState 
+           == GameStateController.ChronicleState.Edit){
+
+                isScaling = true;
+                initScalingTriggerPoint = spawner.SelectedObject.transform.position;
+                initScale = objectHit.transform.localScale;
+                if(spawner.isOccupied)
+                    spawner.Detach();
         }
 
 
@@ -114,17 +145,25 @@ public class InputController : MonoBehaviour {
         if (button == MLInputControllerButton.HomeTap && !spawner.isOccupied)
         {
             spawner.Spawn();
+            //isGrabbing = true;
         }
     }
 
 	private void OnTriggerEnter(Collider other)
 	{
-        objectHit = other.gameObject;
+        objectHit = other.GetComponent<ChronicleObject>();
+
+        if(objectHit!=null)
+            objectHit.outlineController.ShowHoverOutline();
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
+        if(objectHit != null)
+            objectHit.outlineController.HideOutline();
+        
         objectHit = null;
+
 	}
 
 
