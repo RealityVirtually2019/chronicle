@@ -14,12 +14,13 @@ export default class PhotoScreen extends React.Component {
 
   _showPicker() {
     const options = {
-      title: 'Select Photo/Video',
-      storageOptions: {
-        skipBackup: true,
-        path: 'images'
-      }
-    };
+      title: 'Select Photo/Video',
+      storageOptions: {
+        skipBackup: true,
+        path: 'images'
+      },
+      quality: 0.1
+    };
 
     ImagePicker.showImagePicker(options, (response) => {
       console.log('Response = ', response);
